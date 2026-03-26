@@ -4,15 +4,26 @@ import axios from 'axios'
 
 const episodes = ref([])
 
-const text = ref()
+const page = ref(1)
+const totalPages = ref(0)
 
 async function handleGetEpisodes() {
   try {
-    const response = await axios.get('https://rickandmortyapi.com/api/episode')
+    const response = await axios.get('https://rickandmortyapi.com/api/episode', {
+      params: {
+        page: page.value,
+      },
+    })
     episodes.value = response.data.results
+    totalPages.value = response.data.info.pages
   } catch (error) {
     console.error(error)
   }
+}
+
+function setPagination(newPage) {
+  page.value = newPage
+  handleGetEpisodes()
 }
 
 onMounted(() => {
@@ -32,8 +43,18 @@ onMounted(() => {
         :characters="episode.characters"
       />
     </div>
-    <pre>
-        {{ episodes }}
-    </pre>
+    <div class="flex justify-center py-4">
+      <div class="join">
+        <button
+          class="join-item btn btn-lg md:btn-md"
+          v-for="(i, index) in totalPages"
+          :key="index"
+          :class="{ 'btn-active': (index + 1) === page }"
+          @click="setPagination(index + 1)"
+        >
+          {{ index + 1 }}
+        </button>
+      </div>
+    </div>
   </div>
 </template>

@@ -1,6 +1,6 @@
 <template>
   <div class="card bg-base-100 shadow-sm hover:shadow-md hover:bg-neutral-content cursor-pointer">
-    <div class="avatar-group -space-x-6">
+    <div class="avatar-group -space-x-6 m-3">
       <div class="avatar" v-for="character in charactersFilter">
         <div class="w-12">
           <img :src="getImage(character)" />
