@@ -1,4 +1,5 @@
 <script setup>
+import CardBase from '@/components/CardBase.vue'
 import axios from 'axios'
 
 const episodes = ref([])
@@ -21,6 +22,16 @@ onMounted(() => {
 
 <template>
   <div class="p-4">
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <CardBase
+        v-for="episode in episodes"
+        :key="episode.id"
+        :name="episode.name"
+        :episode="episode.episode"
+        :air_date="episode.air_date"
+        :characters="episode.characters"
+      />
+    </div>
     <pre>
         {{ episodes }}
     </pre>
