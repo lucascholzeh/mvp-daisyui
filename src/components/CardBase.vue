@@ -1,5 +1,7 @@
 <template>
-  <div class="card bg-base-100 shadow-sm hover:shadow-md hover:bg-neutral-content cursor-pointer">
+  <div class="card bg-base-100 shadow-sm hover:shadow-md hover:bg-neutral-content cursor-pointer"
+    @click="emit('clickEpisode')"
+  >
     <div class="avatar-group -space-x-6 m-3">
       <div class="avatar" v-for="character in charactersFilter">
         <div class="w-12">
@@ -15,16 +17,23 @@
     <div class="card-body">
       <h2 class="card-title">
         {{ name }}
-        <div class="badge badge-secondary">{{ episode }}</div>
+        <BadgeEpisode>{{ episode }}</BadgeEpisode>
       </h2>
       <div class="card-actions justify-end">
-        <div class="badge badge-outline">{{ air_date }}</div>
+        <BadgeAirDate>{{ air_date }}</BadgeAirDate>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
+import BadgeAirDate from './BadgeAirDate.vue'
+import BadgeEpisode from './BadgeEpisode.vue'
+
+const emit = defineEmits([
+  'clickEpisode'
+])
+
 const props = defineProps({
   name: String,
   episode: String,
