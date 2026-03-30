@@ -41,7 +41,7 @@ O projeto utiliza o que há de mais moderno no ecossistema Front-end:
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/lucascholzeh/mvp-daisyui.git](https://github.com/lucascholzeh/mvp-daisyui.git)
+    git clone https://github.com/lucascholzeh/mvp-daisyui.git
     ```
 
 2.  **Instale as dependências:**
@@ -75,7 +75,7 @@ O projeto utiliza o tema **Nord** customizado, configurado diretamente no CSS pa
 
 ## 👨‍💻 Autor
 
-**Lucas Scholze**
+**Lucas Hoffmann**
 * LinkedIn: [Lucas Scholze Hoffmann](https://www.linkedin.com/in/lucas-scholze-hoffmann/)
 * GitHub: [@lucascholzeh](https://github.com/lucascholzeh)
 
