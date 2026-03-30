@@ -1,13 +1,77 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="pt-BR">
   <head>
+    <!-- Básico -->
     <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vite App</title>
+
+    <!-- Título otimizado -->
+    <title>Rick and Morty API Explorer | Personagens, Episódios e Localizações</title>
+
+    <!-- Meta description -->
+    <meta 
+      name="description" 
+      content="Explore personagens, episódios e localizações de Rick and Morty com este projeto interativo usando a API oficial. Rápido, simples e responsivo." 
+    >
+
+    <!-- Palavras-chave -->
+    <meta 
+      name="keywords" 
+      content="Rick and Morty, API Rick and Morty, personagens Rick and Morty, episódios Rick and Morty, Vue, Vite" 
+    >
+
+    <!-- Autor -->
+    <meta name="author" content="Seu Nome">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/public/favicon.ico">
+    <link rel="android-chrome-192" sizes="192x192" href="/public/android-chrome-192x192.png" type="image/x-icon">
+    <link rel="android-chrome-512" sizes="512x512" href="/public/android-chrome-512x512.png" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/apple-touch-icon.png" type="image/x-icon">
+    <link rel="fav-icon-16" sizes="16x16" href="/public/favicon-16x16.png" type="image/x-icon">
+    <link rel="fav-icon-32" sizes="32x32" href="/public/favicon-32x32.png" type="image/x-icon">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://seusite.com/">
+
+    <!-- Open Graph (Facebook, LinkedIn, etc) -->
+    <meta property="og:title" content="Rick and Morty API Explorer">
+    <meta property="og:description" content="Explore personagens e episódios de Rick and Morty de forma interativa.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://storied-pixie-2b1741.netlify.app/">
+    <meta property="og:image" content="https://seusite.com/preview.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rick and Morty API Explorer">
+    <meta name="twitter:description" content="Explore personagens e episódios de Rick and Morty.">
+    <meta name="twitter:image" content="https://seusite.com/preview.png">
+
+    <!-- Robots -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Tema do navegador (mobile) -->
+    <meta name="theme-color" content="#00ffcc">
+
+    <!-- Performance -->
+    <link rel="preconnect" href="https://rickandmortyapi.com">
+    <link rel="dns-prefetch" href="https://rickandmortyapi.com">
+
   </head>
+
   <body>
+    <!-- Conteúdo fallback para SEO -->
+    <noscript>
+      <h1>Rick and Morty Explorer</h1>
+      <p>
+        Explore personagens, episódios e localizações do universo de Rick and Morty usando a API oficial.
+      </p>
+    </noscript>
+
+    <!-- App -->
     <div id="app"></div>
+
+    <!-- Script principal -->
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

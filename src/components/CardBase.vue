@@ -5,7 +5,7 @@
     <div class="avatar-group -space-x-6 m-3">
       <div class="avatar" v-for="character in charactersFilter">
         <div class="w-12">
-          <img :src="getImage(character)" />
+          <img :src="getImage(character)" :alt="character" />
         </div>
       </div>
       <div v-if="charactersCount" class="avatar avatar-placeholder">
